@@ -23,6 +23,7 @@ public class BinarySearch {
     }
 public static int recbinarySearch(int arr[], int l, int r, int x)
 {
+if (arr.length==1|| arr.length == 0) return -1;
 if (r >= l) {
 int mid = l + (r - l) / 2;
 if (arr[mid] == x)

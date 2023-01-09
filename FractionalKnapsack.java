@@ -1,16 +1,11 @@
 import java.io.*;
 import java.util.Arrays;
 import java.util.Comparator;
-
-// Greedy approach
 class FractionalKnapsack {
 	
-	// Function to get maximum value
-	private static double getMaxValue(ItemValue[] arr,
-									int capacity)
-	{
-		// Sorting items by value/weight ratio;
-		Arrays.sort(arr, new Comparator<ItemValue>() {
+
+	private static double getMaxValue(ItemValue[] arr,int capacity)
+	{		Arrays.sort(arr, new Comparator<ItemValue>() {
 			@Override
 			public int compare(ItemValue item1,
 							ItemValue item2)
@@ -52,13 +47,9 @@ class FractionalKnapsack {
 
 		return totalValue;
 	}
-
-	// Item value class
 	static class ItemValue {
 
 		int value, weight;
-
-		// Item value function
 		public ItemValue(int val, int wt)
 		{
 			this.weight = wt;
@@ -66,7 +57,6 @@ class FractionalKnapsack {
 		}
 	}
 
-	// Driver code
 	public static void main(String[] args)
 	{
 
